@@ -1,0 +1,844 @@
+.post {
+	.post-category {
+		font-size: 14px;
+		font-weight: 500;
+		margin-bottom: 15px;
+		line-height: 1;
+		a {
+			color: $color1;	
+		}
+	}
+	.post-title {
+		a {
+			display: block;
+			color: $color1;	
+			
+			&:hover {
+				color: $color2;	
+			}
+		}
+	}
+	.post-content {
+		margin-bottom: 15px;
+		line-height: 1.8;	
+		
+		p a:not(.btn):not(.button):not(.thb-iconbox) {
+			position: relative;
+			
+			&:after {
+				content: '';
+				position: absolute;
+				top: calc(100% - 2px);
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: $color1;
+				opacity: 0;
+				@include scale(0,1);
+				@extend .quick-transition;
+				will-change: scale, opacity;
+			}
+			&:hover {
+				&:after {
+					opacity: 1;
+					@include scale(1,1);	
+				}
+			}
+		}
+	}
+	.post-meta {
+		font-size: 10px;
+		text-transform: uppercase;
+		color: $color1;
+		font-weight: 400;
+		
+		a {
+			color: $color1;
+			font-weight: 700;	
+		}
+	}
+	.post-gallery {
+		&>a {
+			display: block;	
+		}
+		&.no-img {
+			background: rgba(0, 0, 0, 0.05);
+		}
+		&.video-container {
+			padding: 0;
+		}
+	}
+	&.sticky {
+		.entry-title {
+			text-decoration: underline;	
+		}
+	}
+	&.style1 {
+		margin-bottom: 30px;
+		@include min-break($break-medium) {
+			margin-bottom: 40px;	
+		}
+		.post-gallery {
+			margin-bottom: 28px;
+			
+			img {
+				width: 100%;	
+			}
+		}
+		.post-title {
+			h3 {
+				margin-bottom: 12px;
+				@include min-break($break-large) {
+					font-size: 30px;
+				}	
+			}
+		}
+		.post-content {
+			p {
+				margin: 0;	
+				font-size: 14px;
+			}
+		}
+		&.style8 {
+			padding-bottom: 30px;
+			border-bottom: 5px solid #f0f0f1;
+			@extend .quick-transition;
+			&:hover {
+				border-bottom-color: $color2;	
+			}
+			.entry-title {
+				margin-bottom: 10px;
+			}
+			.post-gallery {
+				width: 100%;
+				padding-bottom: 220px;
+				position: relative;
+				@include background-size(cover);
+				
+				a {
+					display: block;
+					position: absolute;
+					width: 100%;
+					left: 0;
+					top: 0;
+					height: 100%;
+				}
+			}
+			&.style8-first {
+				.post-title {
+					padding-right: 10%;
+				}
+			}
+		}
+	}
+	&.style2 {
+		.post-gallery {
+			img {
+				width: 100%;	
+			}
+		}
+		.blog-post-container {
+			position: relative;
+			background: #fff;
+			padding: 30px 15px;
+			margin: 0;
+			text-align:	center;
+			@include min-break($break-small) {
+				padding: 50px;
+				margin: -90px 10% 0;
+			}
+		}
+	}
+	&.style3 {
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		@media only screen and (min-width: $break-small) {
+			margin-bottom: 45px;	
+			padding-bottom: 45px;
+		}
+		.pagination-style2 &,
+		.pagination-style1 & {
+			&:last-of-type {
+				border-bottom: 0;	
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+		
+		h4 {
+			margin-bottom: 10px;	
+		}
+		.post-content {
+			p {
+				margin: 0;	
+				font-size: 14px;
+			}
+		}
+		.post-gallery {
+			margin-bottom: 20px;
+			
+			display: flex;
+			height: 100%;
+			justify-content: center;
+			align-items: 	center;
+			@extend .cf;
+			@include min-break($break-medium) {
+				margin-bottom: 0;
+			}
+			img,
+			a {
+				display: block;
+				width: 100%;	
+			}
+			svg {
+				width: 60px;
+				height: 60px;
+				opacity: 0.3;	
+			}
+			
+		}
+		
+	}
+	&.style4 {
+		position: relative;
+		border-top: 1px solid #efefef;
+		padding: 7vh 0;
+		
+		.columns:last-child {
+			display: none;
+			@include min-break($break-medium) {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;	
+			}
+		}
+		svg {
+			fill: rgba($color1, 0.2);
+		}
+		&:last-of-type {
+			border-bottom: 1px solid #efefef;	
+		}
+		p,
+		.post-gallery,
+		.post-meta,
+		svg {
+			@extend .quick-transition;
+		}
+		.post-gallery {
+			background: $color1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			opacity: 0;
+			bottom: 0;
+			z-index: -1;
+			will-change: opacity;
+			&>div {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0.4;
+				@extend .cover-bg;	
+			}
+		}
+		&:hover {
+			.post-gallery {
+				opacity: 1;
+			}
+			border-color: transparent;
+			color: #fff;
+			
+			.post-meta,
+			.post-content p,
+			a,
+			.post-title a {
+				color: #fff;
+			}
+			& + .style4 {
+				border-color: transparent;
+			}
+			svg {
+				fill: #fff;	
+			}
+		}
+	}
+	&.style5 {
+		background: #f2f2f2;
+		margin-bottom: 30px;
+		
+		p,
+		.post-gallery img,
+		.post-meta {
+			@extend .quick-transition;
+		}
+		p {
+			font-size: 14px;
+		}
+		.post-gallery {
+			background: $color1;
+			position: relative;
+			img {
+				will-change: opacity;
+			}
+			div {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				opacity: 0;
+				z-index: 1;
+				will-change: opacity;
+			}
+			svg {
+				fill: #fff;
+				
+				@include min-break($break-small) {
+					@include scale(2);	
+				}
+				@include min-break($break-medium) {
+					@include scale(3);	
+				}
+			}
+		}
+		.blog-content {
+			padding: 15px;
+			z-index: 0;
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			@include min-break($break-small) {
+				padding: 40px;	
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: $color2;
+				@include translateY(-100%);
+				overflow: hidden;	
+				will-change: transform;
+				@extend .quick-transition;
+			}
+		}
+		&:hover {
+			.post-gallery {
+				img {
+					opacity: 0.4;	
+				}
+				div {
+					opacity: 1;	
+				}
+			}
+			.blog-content {
+				&:after {
+					@include translateY(0);	
+				}
+				color: #fff;
+				
+				.post-meta,
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+	&.style6 {
+		border: 1px solid rgba(0,0,0,0.06);
+		border-top-color: transparent;
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 40vh;
+		position: relative;
+		z-index: 0;
+		&.style6-alt {
+			border-top-color: rgba(0,0,0,0.06);
+			margin-bottom: 30px;
+		}
+		@include min-break($break-small) {
+			padding: 30px;	
+		}
+		@include min-break($break-medium) {
+			padding: 45px;	
+		}
+		& + .style6 {
+			border-left-color: transparent;
+		}
+		.post-meta {
+			margin-top: auto;
+			@extend .quick-transition;
+		}
+		.post-gallery {
+			background: $color2;
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			width: calc(100% + 2px);
+			height: calc(100% + 2px);
+			opacity: 0;
+			z-index: -1;
+			will-change: opacity;
+			@extend .quick-transition;
+			div {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0.2;
+				@extend .cover-bg;
+			}
+		}
+		&:hover {
+			color: #fff;
+			border-color: transparent;
+			.post-meta,
+			.post-title a,
+			a {
+				color: #fff;
+			}
+			.post-gallery {
+				opacity: 1;
+			}
+		}
+	}
+	&.style7 {
+		margin-bottom: 30px;
+		background: #f2f2f2;
+		@include min-break($break-small) {
+			margin-bottom: 45px;	
+		}
+		&>.row {
+			@include min-break($break-medium) {
+				min-height: 60vh;
+			}
+			@include min-break($break-large) {
+				min-height: 50vh;
+			}
+			@include min-break($break-xlarge) {
+				min-height: 40vh;
+			}
+		}
+		.post-gallery {
+			@extend .cover-bg;
+			min-height: 30vh;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			img,
+			div {
+				will-change: opacity;	
+			}
+		}
+		.columns {
+			display: flex;
+			align-items: stretch;
+		}
+		.blog-content {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 15px;
+			z-index: 0;
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			@include min-break($break-small) {
+				padding: 40px;	
+			}
+			@include min-break($break-xlarge) {
+				padding: 60px;	
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: $color2;
+				@include translateX(calc(-100% - 1px));
+				overflow: hidden;	
+				will-change: transform;
+				@extend .quick-transition;
+			}
+		}
+		&:hover {
+			.post-gallery {
+				img {
+					opacity: 0.4;	
+				}
+				div {
+					opacity: 1;	
+				}
+			}
+			.blog-content {
+				&:after {
+					@include translateY(0);	
+				}
+				color: #fff;
+				
+				.post-meta,
+				a,
+				p {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+.post-content-container {
+	@include min-break($break-medium) {
+		padding-right: 60px;	
+	}
+}
+.post-detail {
+	.post-title {
+		.post-category {
+			font-weight: 500;
+			font-size: 16px;
+			a {
+				display: inline-block;
+			}
+		}
+		.entry-title {
+			word-wrap: break-word;
+			line-height: 1.1;
+		}
+		.post-meta {
+			margin-top: 5px;
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: 400;
+			
+			a {
+				font-weight: 700;	
+				display: inline-block;
+			}
+		}
+	}
+	&.style1-detail {
+		.post-title {
+			.post-category {
+				color: #fff;
+				a {
+					color: #fff;	
+				}
+			}
+			.entry-title {
+				color: #fff;	
+			}
+			.post-meta {
+				color: #fff;	
+				a {
+					color: #fff;
+				}
+			}
+		}
+		.post-content {
+			img.aligncenter {
+				margin-left: -5vw;
+				width: calc(100% + 10vw);
+				max-width: initial;
+			}
+		}
+	}
+	&.style2-detail, 
+	&.style3-detail,
+	&.style4-detail,
+	&.style5-detail {
+		.post-title {
+			margin-bottom: 40px;
+		}
+		.post-gallery {
+			.parallax_bg {
+				opacity: 1;	
+			}
+		}
+	}
+	
+	.post-gallery {
+		background: $color1;
+		padding: 60px 0;
+		margin-bottom: 30px;
+		@include min-break($break-small) {
+			margin-bottom: 60px;
+		}
+		@include min-break($break-medium) {
+			margin-bottom: 90px;
+		}
+		.parallax_bg {
+			opacity: 0.7;
+		}
+	}
+	.entry-footer {
+		text-align: center;
+		border-bottom: 1px solid #efefef;
+		padding: 20px 0;
+		margin-bottom: 30px;
+		@include min-break($break-small) {
+			padding: 40px 0;	
+			margin-bottom: 40px;
+		}
+	}
+}
+.post-gallery {
+	&.parallax {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 40vh;
+		position: relative;
+		overflow: hidden;
+		padding: 60px 0;
+		@include min-break($break-small) {
+			min-height: 60vh;
+		}
+		img {
+			width: 100%;	
+		}
+		.parallax_bg {
+			width: 100%;
+			height: 130%;
+			background-size: cover;
+			background-position: center center;
+			@include translateY(0);
+			position: absolute;
+			top: -15%;
+			left: 0;
+			z-index: 0;
+			will-change: transform;
+		}
+		.post-title {
+			width: 100%;
+			z-index: 2;
+			text-align: center;
+		}
+	}
+}
+.posts-shortcode {
+	&.style6-alt {
+		.columns {
+			display: flex;
+		}
+	}
+	.post {
+		width: 100%;
+	}
+}
+.scroll-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 30px;
+	height: 50px;
+	margin-left: -15px;
+	text-align: center;
+	z-index: 30;
+	cursor: pointer;
+	&.style1 {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			height: 50px;
+			width: 1px;
+			background: $color1;
+			will-change: transform;
+			@include transform-origin(0,0);
+			@extend .quick-transition;
+		}
+		&>div {
+			position: relative;
+			display: inline-block;
+			height: 50px;
+			width: 1px;
+			
+			&:before {
+				content: '';
+				width: 10px;
+				height: 1px;
+				background: $color1;
+				position: absolute;
+				bottom: 30%;
+				right: 0;
+				will-change: transform;
+				@include transform(rotateZ(45deg) scaleX(0));
+				@include transform-origin(100%,100%);
+				@extend .quick-transition;
+			}
+			&:after {
+				content: '';
+				width: 10px;
+				height: 1px;
+				background: $color1;
+				position: absolute;
+				bottom: 30%;
+				left: 2px;
+				will-change: transform;
+				@include transform(rotateZ(-45deg) scaleX(0));
+				@include transform-origin(0,100%);
+				@extend .quick-transition;
+			}
+		}
+		&:hover {
+			&:before {
+				@include scaleY(0.7);	
+			}
+			&>div {
+				&:before {
+					@include transform(rotateZ(45deg) scaleX(1));
+					@include transition-delay(0.1s);
+				}
+				&:after {
+					@include transform(rotateZ(-45deg) scaleX(1));
+					@include transition-delay(0.1s);
+				}
+			}
+		}
+		.single-portfolio.light-title &,
+		&.light {
+			&:before,
+			&>div:before,
+			&>div:after {
+				background: #fff;	
+			}
+		}
+	}
+	&.style2 {
+		bottom: 15px;
+		border-radius: 14px;
+		border: 2px solid rgba($color1,0.4);
+		@extend .quick-transition;
+		@include scale(0.75);
+		
+		@include min-break($break-small) {
+			bottom: 30px;
+			@include scale(1);
+		}
+		&:hover {
+			border-color: rgba($color1,0.8);
+		}
+		div {
+			position: absolute;
+			top: 8px;
+			left: 12px;
+			width: 2px;
+			height: 4px;
+			background: $color1;
+			border-radius: 4px;
+			
+			@include animation(thb-scrollanimation 2s infinite);
+		}
+		
+		.single-portfolio.light-title &,
+		&.light {
+			border-color: rgba(255,255,255,0.4);
+			
+			div {
+				background: #fff;
+			}
+			&:hover {
+				border-color: rgba(255,255,255,0.8);
+			}
+		}
+	}
+	&.style3 {
+		&>div {
+			position: relative;
+			display: inline-block;
+			height: 50px;
+			width: 1px;
+			
+			&:before {
+				content: '';
+				width: 16px;
+				height: 2px;
+				background: $color1;
+				position: absolute;
+				bottom: 50%;
+				right: 1px;
+				will-change: transform;
+				@include transform(rotateZ(45deg) scaleX(0.75));
+				@include transform-origin(100%,100%);
+				@extend .quick-transition;
+			}
+			&:after {
+				content: '';
+				width: 16px;
+				height: 2px;
+				background: $color1;
+				position: absolute;
+				bottom: 50%;
+				left: 1px;
+				will-change: transform;
+				@include transform(rotateZ(-45deg) scaleX(0.75));
+				@include transform-origin(0,100%);
+				@extend .quick-transition;
+			}
+		}
+		&:hover {
+			&>div {
+				&:before {
+					@include transform(rotateZ(45deg) scaleX(1));
+					@include transition-delay(0.1s);
+				}
+				&:after {
+					@include transform(rotateZ(-45deg) scaleX(1));
+					@include transition-delay(0.1s);
+				}
+			}
+		}
+		.single-portfolio.light-title &,
+		&.light {
+			&>div:before,
+			&>div:after {
+				background: #fff;	
+			}
+		}
+	}
+}
+@include keyframes(thb-scrollanimation) {
+    0%   { height: 5px; }
+    50%	 { height: 24px; }
+    100% { height: 5px; }
+}
+.row {
+	&.style8 {
+		.columns {
+			display: flex;
+		}
+	}
+}
+.related-posts {
+	.related-title {
+		margin-bottom: 35px;
+	}
+	.wp-post-image {
+		margin-bottom: 15px;
+	}
+	.post-title {
+		h6 {
+			text-transform: none;	
+			font-size: 13px;
+			font-weight: 400;
+		}
+	}
+}

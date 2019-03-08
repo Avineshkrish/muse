@@ -1,0 +1,33 @@
+.midnightHeader {
+	z-index: 5;
+	will-change: transform;
+	@include backface-visibility(hidden);
+	.midnightInner {
+		padding: 20px 0;
+		@include min-break($break-large) {
+			padding: 15px 0;
+		}
+	}
+	&.overflow-enabled:not(.disable-pointers) {
+		z-index: 10;
+		overflow: visible !important;
+		.midnightInner {
+			overflow: visible !important;	
+		}
+	}
+	&.disable-pointers {
+		z-index: 2;
+		pointer-events: none;
+	}
+	&.light-title {
+		@extend .white-header;
+	}
+}
+
+.header {
+	.midnight_on & {
+		&:before {
+			display: none;	
+		}
+	}
+}

@@ -1,0 +1,74 @@
+<wpml-config>
+	<admin-texts>
+		<key name="menu_footer"/>
+		<key name="subfooter_text"/>
+		<key name="call_to_action_text"/>
+		<key name="call_to_action_button_text"/>
+		<key name="call_to_action_button_link"/>
+		<key name="header_button_text"/>
+		<key name="header_action_button_link"/>
+	</admin-texts>
+  <custom-types>
+      <custom-type translate="1">revslider</custom-type>
+  </custom-types>
+  <shortcodes>
+    <shortcode>
+        <tag>thb_autotype</tag>
+        <attributes>
+            <attribute>typed_text</attribute>
+        </attributes>
+    </shortcode>
+    <shortcode>
+        <tag>thb_awards</tag>
+        <attributes>
+            <attribute>name</attribute>
+            <attribute>description</attribute>
+        </attributes>
+    </shortcode>
+    <shortcode>
+        <tag>thb_fadetype</tag>
+        <attributes>
+            <attribute>fade_text</attribute>
+        </attributes>
+    </shortcode>
+    <shortcode>
+        <tag>thb_button</tag>
+        <attributes>
+            <attribute>link</attribute>
+        </attributes>
+    </shortcode>
+    <shortcode>
+        <tag>thb_experience</tag>
+        <attributes>
+            <attribute>position</attribute>
+            <attribute>description</attribute>
+        </attributes>
+    </shortcode>
+    <shortcode>
+        <tag>thb_iconbox</tag>
+        <attributes>
+            <attribute>heading</attribute>
+            <attribute>description</attribute>
+        </attributes>
+    </shortcode>
+    <shortcode>
+        <tag>thb_team</tag>
+        <attributes>
+            <attribute>sub_title</attribute>
+        </attributes>
+    </shortcode>
+    <shortcode>
+        <tag>thb_awards</tag>
+        <attributes>
+            <attribute>name</attribute>
+        </attributes>
+    </shortcode>
+    <shortcode>
+        <tag>thb_testimonial</tag>
+        <attributes>
+            <attribute>quote</attribute>
+            <attribute>author_title</attribute>
+        </attributes>
+    </shortcode>
+    </shortcodes>
+</wpml-config>

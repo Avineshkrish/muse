@@ -1,0 +1,174 @@
+@import "compass/css3";
+@import 'compass/css3/filter';
+@import "compass/css3/user-interface";
+
+$break-small: 40.063em;
+$break-medium: 64.063em;
+$break-large: 75em;
+$break-xlarge: 90.063em;
+
+$transition: cubic-bezier(0.37, 0.31, 0.2, 0.85);
+
+$color1: #1f1f1f;
+$color2: #ef173b;
+
+$social: (
+	facebook: #3b5998,
+	facebook-messenger: #0084ff,
+	google-plus: #dd4b39,
+	linkedin: #007bb6,
+	pinterest: #cb2027,
+	twitter: #00aced,
+	instagram: #3f729b,
+	vk: #45668e,
+	tumblr: #35465c,
+	xing: #cfdc00,
+	soundcloud: #f80,
+	dribbble: #ea4c89,
+	youtube: #e52d27,
+	spotify: #7ab800,
+	behance: #1769ff,
+	deviantart: #4e6252,
+	vimeo: #1ab7ea,
+	flickr: #0063dc,
+	rss: #f26522,
+	twitch: #6441a5,
+	fivehundred: #0099e5,
+	github: #4078c0
+);
+
+/*------------------------------------------------------------------
+Foundation
+*/
+@import "foundation.scss";
+
+/*------------------------------------------------------------------
+Utilities
+*/
+@import "utilities.scss";
+
+/*------------------------------------------------------------------
+Structure
+*/
+@import "structure.scss";
+
+/*------------------------------------------------------------------
+Page Transitions
+*/
+@import "plugin-animsition.scss";
+
+/*------------------------------------------------------------------
+Typography
+*/
+@import "typography.scss";
+
+/*------------------------------------------------------------------
+Header
+*/
+@import "header.scss";
+@import "header-midnight.scss";
+
+/*------------------------------------------------------------------
+Mobile Menu
+*/
+@import "mobilemenu.scss";
+
+/*------------------------------------------------------------------
+Blog Related
+*/
+@import "blog.scss";
+
+/*------------------------------------------------------------------
+Author
+*/
+@import "author.scss";
+
+/*------------------------------------------------------------------
+Comments
+*/
+@import "comments.scss";
+
+/*------------------------------------------------------------------
+Forms
+*/
+@import "forms.scss";
+
+/*------------------------------------------------------------------
+Wp Specific
+*/
+@import "wpspecific.scss";
+
+/*------------------------------------------------------------------
+Pagination
+*/
+@import "pagination.scss";
+
+/*------------------------------------------------------------------
+Portfolio
+*/
+@import "portfolio.scss";
+
+/*------------------------------------------------------------------
+Vertical - Deck
+*/
+@import "vertical-deck.scss";
+
+/*------------------------------------------------------------------
+Plugin -  Swiper
+*/
+@import "plugin-swiper.scss";
+
+/*------------------------------------------------------------------
+Plugin -  Slick
+*/
+@import "plugin-slick.scss";
+
+/*------------------------------------------------------------------
+Plugin -  Photo Swipe
+*/
+@import "plugin-photoswipe.scss";
+@import "plugin-photoswipe-skin.scss";
+
+/*------------------------------------------------------------------
+Plugin -  Perfect Scrollbar
+*/
+@import "plugin-ps.scss";
+
+/*------------------------------------------------------------------
+404
+*/
+@import "404.scss";
+
+/*------------------------------------------------------------------
+Widgets
+*/
+@import "widgets.scss";
+
+/*------------------------------------------------------------------
+Shortcodes
+*/
+@import "shortcodes.scss";
+
+/*------------------------------------------------------------------
+WooCommerce
+*/
+@import "woocommerce-shop.scss";
+@import "woocommerce-product.scss";
+@import "woocommerce-cart.scss";
+@import "woocommerce-checkout.scss";
+@import "woocommerce-myaccount.scss";
+
+/*------------------------------------------------------------------
+Plugin - Full Page
+*/
+@import "plugin-fullPage.scss";
+
+/*------------------------------------------------------------------
+Footer
+*/
+@import "footer.scss";
+
+/*------------------------------------------------------------------
+Demo Switcher
+*/
+@import "demo-switcher.scss";

@@ -1,0 +1,261 @@
+.thb-shop-title {
+	margin: 5vh 0 10vh;
+	font-weight: 300;
+	
+	.woocommerce-checkout & {
+		margin-bottom: 5vh;
+	}
+}
+.thb-box-title,
+.cart-collaterals h2,
+.woocommerce-checkout h2,
+#order_review_heading,
+#customer_details h3,
+.woocommerce-Address-title h3,
+.woocommerce-MyAccount-content h3,
+.woocommerce-MyAccount-content h2 {
+	display: block;
+	background: #f5f5f5;
+	padding: 20px 25px;
+	line-height: 1;
+	font-weight: 600;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 0 0 30px;
+}
+
+.cart-section,
+.woocommerce-billing-fields,
+.woocommerce-shipping-fields,
+.woocommerce-additional-fields {
+	@include min-break($break-small) {
+		padding-right: 5%;
+	}
+}
+.shop_table {
+	width: 100%;
+	margin-bottom: 30px;
+	thead {
+		text-align: left;	
+		
+		tr {
+			border-bottom: 2px solid #f5f5f5;
+			
+			th {
+				text-transform: uppercase;
+				color: #7f7e83;
+				font-size: 12px;
+				font-weight: 400;
+				padding: 0 5px 10px;	
+				
+				@include min-break($break-small) {
+					padding: 0 13px 10px;
+				}
+				&:first-child {
+					.woocommerce-checkout & {
+						padding-left: 25px;
+					}
+				}
+				.woocommerce-checkout & {
+					text-transform: uppercase;
+					font-size: 12px;
+				}
+				&.product-thumbnail {
+					
+					@include max-break($break-medium) {
+						display: none;
+					}
+				}
+			}	
+		}
+	}
+	tbody {
+		tr {
+			border-bottom: 1px solid #f5f5f5;
+			
+			th {
+				.woocommerce-checkout &,
+				.cart_totals & {
+					text-transform: uppercase;
+					font-size: 12px;
+					padding-left: 25px;
+				}
+			}
+			td {
+				padding: 10px 5px;	
+				
+				@include min-break($break-small) {
+					padding: 30px 13px;
+				}
+				.woocommerce-checkout &,
+				.cart_totals & {
+					padding-top: 15px;
+					padding-bottom: 15px;	
+				}
+				&:first-child {
+					.woocommerce-checkout & {
+						padding-left: 25px;
+					}
+				}
+			}
+			&:last-child {
+				border: 0;	
+			}
+		}	
+		.product-name {
+			width: 55%;
+		}
+		.product-thumbnail {
+			img {
+				max-width: 100px;	
+			}
+			
+			@include max-break($break-medium) {
+				display: none;
+			}
+		}
+	}
+	.actions {
+		padding-left: 0;
+		padding-right: 0;
+		.footer_coupon {
+			display: flex;
+			justify-content: space-between;
+			
+			@include max-break($break-medium) {
+				flex-direction: column;
+				flex: 1;
+				
+				.coupon {
+					margin-bottom: 20px;
+					display: flex;
+					
+					.box {
+						flex: 1;
+					}
+				}
+			}
+			.button {
+				justify-content: center;
+			}
+		}
+	}
+	tfoot {
+		color: $color1;
+		tr {
+			text-align: left;
+			background: #f8f8f8;
+			border-bottom: 1px solid #fff;
+			&.order-total {
+				background: #dbf6e3;
+				
+				td {
+					font-size: 22px;	
+				}
+			}
+		}
+		th {
+				text-transform: uppercase;
+				font-size: 12px;
+				padding-left: 25px;
+				font-weight: 600;
+		}
+		td {
+				padding: 15px 5px;	
+				
+				@include min-break($break-small) {
+					padding: 15px 13px;
+				}
+		}
+		&:last-child {
+			border: 0;	
+		}
+	}
+	&.order_details {
+		
+	}
+}
+.coupon {
+	label {
+		display: none;	
+	}
+	.box {
+		margin: 0;
+	}
+}
+#shipping_method {
+	list-style: none;
+	margin: 0;
+	
+	label {
+		font-size: 14px;
+		display: inline;
+		margin-left: 7px;
+	}
+}
+.cart_totals {
+	h2 {
+		margin-bottom: 0;	
+	}
+	.shop_table {
+		margin: 0;
+		tbody {
+			tr {
+				th {
+					text-transform: uppercase;
+					font-size: 12px;
+					padding-left: 25px;	
+					
+					@include min-break($break-small) {
+						width: 150px;	
+					}
+				}
+				td {
+					font-size: 16px;
+					
+				}
+				&.order-total {
+					td {
+						font-size: 22px;	
+					}
+				}
+			}	
+		}
+	}
+	
+	.shipping-calculator-form {
+		.form-row {
+			margin-bottom: 10px;
+		}
+		select {
+			font-size: 16px;	
+		}
+		.input-text {
+			width: 100%;
+		}
+	}
+	
+	p {
+		
+		margin: 0;
+	}
+	.shipping-calculator-button {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 12px;
+	}
+	.button {
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 50px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+}
+.cart-empty {
+	svg {
+		max-width: 120px;	
+		margin-bottom: 30px;
+	}
+}

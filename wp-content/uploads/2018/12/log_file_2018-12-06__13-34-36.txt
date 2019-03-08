@@ -1,0 +1,132 @@
+
+---Downloaded files---
+The import files for: Digital Agency Demo were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = http://highonthis.in/muse
+Data file = /home/highonthis/public_html/muse/wp-content/uploads/2018/12/demo-content-import-file_2018-12-06__13-34-36.xml
+Widget file = /home/highonthis/public_html/muse/wp-content/uploads/2018/12/demo-widgets-import-file_2018-12-06__13-34-36.json
+Customizer file = not defined!
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---pt-ocdi/before_widgets_import---
+
+
+---Importing widgets---
+Footer Column 1 : 
+
+Text - No Title - Imported
+
+Footer Column 2 : 
+
+Text - Our Address - Imported
+
+Footer Column 3 : 
+
+Navigation Menu - Get in Touch - Imported
+
+Footer Column 4 : 
+
+Text - Copyright - Imported
+
+
+
+---pt-ocdi/after_import---
+

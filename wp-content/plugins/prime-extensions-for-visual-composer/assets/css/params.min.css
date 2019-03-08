@@ -1,0 +1,41 @@
+#vc_ui-panel-edit-element .prime-hint{position:relative;display:inline-block;width:17px;height:17px;line-height:17px;margin-left:10px;font-size:14px;text-align:center;outline:0;cursor:pointer;color:#74cddf;background:#eefafd;-webkit-border-radius:50% 50%;-moz-border-radius:50% 50%;-ms-border-radius:50% 50%;border-radius:50% 50%;text-decoration:none}
+#vc_ui-panel-edit-element .prime-hint:hover{text-decoration:none}#vc_ui-panel-edit-element .prime-hint .prime-hint-title{display:block;font-size:1.1em;line-height:1.6em;text-transform:uppercase}
+#vc_ui-panel-edit-element .prime-hint .prime-hint-content{position:absolute;z-index:10;top:50%;display:inline-block;opacity:0;visibility:hidden;margin-top:-23px;margin-left:10px;margin-right:10px;width:250px;background:#333;font-weight:normal;color:#fff;font-size:.9em;line-height:1.5em;padding:15px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;border-radius:2px;-webkit-transition:all .25s;transition:all .25s}
+#vc_ui-panel-edit-element .prime-hint .prime-hint-content a{color:#fff;text-decoration:underline}
+#vc_ui-panel-edit-element .prime-hint.prime-hint-content a:hover{color:#fff;text-decoration:none}
+#vc_ui-panel-edit-element .prime-hint:hover .prime-hint-content{opacity:1;visibility:visible}
+#vc_ui-panel-edit-element .prime-hint-left .prime-hint-content{left:40%}#vc_ui-panel-edit-element .prime-hint-left:hover .prime-hint-content{left:100%}
+#vc_ui-panel-edit-element .prime-hint-right .prime-hint-content{right:40%}#vc_ui-panel-edit-element .prime-hint-right:hover .prime-hint-content{right:100%}
+#vc_ui-panel-edit-element .prime-hint .prime-hint-triangle{position:absolute;top:19px;display:block;background:#333;width:10px;height:10px;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}
+#vc_ui-panel-edit-element .prime-hint-left .prime-hint-triangle{left:-5px}#vc_ui-panel-edit-element .prime-hint-right .prime-hint-triangle{right:-5px}
+.prime-param-important-wrapper.prime-dashicon.prime-align-right.prime-bold-font.prime-blue-font.vc_column.vc_col-sm-12.wpb_el_type_prime_param_heading.vc_wrapper-param-type-prime_param_heading.vc_shortcode-param{background:#ecf0f1 none repeat scroll 0 0;padding:0}
+.prnotice_vc_param_value{float:right}.prnotice_vc_param_value a{text-decoration:none}
+.dashicons.dashicons-video-alt3{margin-top:-13px}.prnotice_vc_param_value>img{height:90px;width:90px}
+.float_left .prnotice_vc_param_value{float:left;margin-right:20px}.vc_radio-label{margin:10px}
+.vc_wrapper-param-type-prime_slider{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.vc_wrapper-param-type-prime_slider *{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}
+.vc_wrapper-param-type-prime_slider *:before,.vc_wrapper-param-type-prime_slider *:after{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}
+.vc_wrapper-param-type-prime_slider .prime-slider-wrap{display:flex;align-items:center;margin-top:-7px}
+.vc_wrapper-param-type-prime_slider .prime-vc-slider{display:inline-block;width:100%;border-radius:3px;background-color:#e9e9e9}
+.vc_wrapper-param-type-prime_slider .prime-vc-slider .prime-slider{position:relative;height:20px;border-radius:3px;border:0;background-color:#e9e9e9;margin:0 10px}
+.vc_wrapper-param-type-prime_slider .prime-vc-slider .prime-slider .ui-slider-handle{position:absolute;top:0;left:0;display:block;margin-left:-12px;border-radius:3px;width:26px;height:24px;margin-top:-2px;border:0;background:#666 !important}
+.vc_wrapper-param-type-prime_slider .prime-vc-slider .ui-slider-handle:after{width:26px;height:24px;line-height:24px;font-family:'Dashicons';font-size:20px;display:block;color:#f9f9f9;content:"\f333";text-align:center;cursor:pointer}
+.vc_wrapper-param-type-prime_slider .prime-value{display:inline-block;width:80px;height:32px;text-align:center}
+.vc_wrapper-param-type-prime_slider .ui-slider-range{height:100%;margin-left:-10px;background:#1abc9c;border-radius:3px 0 0 3px}
+.vc_wrapper-param-type-prime_slider .prime-unit{display:inline-block;width:60px;padding-left:10px}
+.vc_wrapper-param-type-prime_slider .prime-vc-slider.prime-hide-input{width:100%}
+.vc_wrapper-param-type-prime_slider .prime-vc-slider.prime-hide-input+.prime-value{display:none}
+.vc_col-xs-6.vc_column.wpb_el_type_textfield.vc_wrapper-param-type-textfield.vc_shortcode-param.vc_column{padding-top:15px}
+.onoffswitch{display:inline-block;float:left;margin-right:15px;position:relative;width:95px}
+.onoffswitch-checkbox{left:0;outline:0 none;position:absolute;top:2px}.onoffswitch-label{border:0 solid #999;border-radius:0;cursor:pointer;display:block;overflow:hidden}
+.onoffswitch-inner{margin-left:-100%;transition:margin .3s ease-in 0s;width:200%}
+.onoffswitch-inner>div{box-sizing:border-box;color:#fff;float:left;font-size:12px;font-weight:700;height:24px;line-height:24px;padding:0;position:relative;width:50%}
+.chosen-container *,.onoffswitch-inner>div{box-sizing:border-box}.ult-expand,.ultbs-icon{line-height:20px;min-width:16px}
+.onoffswitch-inner .onoffswitch-active{background-color:#ccc;color:#fff;padding-left:15px}
+.onoffswitch-inner .onoffswitch-inactive{background-color:#ccc;color:#fff;padding-right:15px;text-align:right}
+.onoffswitch-switch{border:0 solid #999;border-radius:0;bottom:0;margin:0;position:absolute;text-align:center;top:0;width:35px}
+.onoffswitch-active .onoffswitch-switch{background:#3f9cc7 none repeat scroll 0 0;left:0}
+.onoffswitch-inactive .onoffswitch-switch{background:#7d7d7d none repeat scroll 0 0;right:0}
+.onoffswitch-active .onoffswitch-switch::before{border-color:#3f9cc7 transparent transparent #3f9cc7;border-style:solid;border-width:15px;content:" ";left:35px;position:absolute;top:0}
+.onoffswitch-inactive .onoffswitch-switch::before{border-color:transparent #7d7d7d #7d7d7d transparent;border-style:solid;border-width:50px;content:" ";position:absolute;right:35px;top:0}
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner{margin-left:0}

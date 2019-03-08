@@ -1,0 +1,173 @@
+.pagination-space {
+	padding: 10vh 0;
+	position: relative;
+}
+.pagination {
+	width: 100%;
+	line-height: 1;
+	padding: 10vh 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.screen-reader-text {
+		display: none;
+	}
+	.page-numbers {
+		list-style: none;
+		display: inline-flex;
+		color: rgba($color1, 0.2);
+		font-size: 12px;
+		padding: 0 5px;
+		vertical-align: middle;
+		font-weight: 600;
+		white-space: nowrap;
+		&.current,
+		&:not(.dots):hover {
+			color: $color2;	
+		}
+		@include min-break($break-small) { 
+			font-size: 20px;
+			padding: 0 10px;
+		}
+		@include min-break($break-medium) { 
+			font-size: 40px;
+		}
+		&.prev,
+		&.next {
+			display: inline-flex;
+			align-items: center;
+			position: relative;
+			@include min-break($break-small) { 
+				font-size: 14px;
+			}
+			@include min-break($break-medium) { 
+				font-size: 30px;
+			}
+			&:hover {
+				&:before,
+				&:after {
+					@include transform(translateY(-50%) scale(1));
+				}
+			}
+		}
+		&.prev {
+			&:after {
+				content: '';
+				width: 2.5vw;
+				display: inline-block;
+				height: 2px;
+				vertical-align: middle;
+				margin-left: 15px;
+				background: rgba($color1, 0.2);		
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				width: 2.5vw;
+				display: inline-block;
+				height: 2px;
+				background: $color2;
+				@extend .quick-transition;
+				@include transform(translateY(-50%) scale(0,1));
+				@include transform-origin(0, 0);
+			}
+		}
+		&.next {
+			&:before {
+				content: '';
+				width: 2.5vw;
+				display: inline-block;
+				height: 2px;
+				vertical-align: middle;
+				margin-right: 15px;
+				background: rgba($color1, 0.2);	
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 10px;
+				width: 2.5vw;
+				display: inline-block;
+				height: 2px;
+				background: $color2;
+				@extend .quick-transition;
+				@include transform(translateY(-50%) scale(0,1));
+				@include transform-origin(100%, 0);
+			}
+		}
+	}
+}
+.woocommerce-pagination {
+	
+}
+.swiper-pagination {
+	&.swiper-pagination-fraction,
+	&.swiper-pagination-bullets {
+		position: fixed;
+		z-index: 100;
+		top: auto;
+		bottom: 15px;
+		right: 15px;
+		width: auto;
+		left: auto;
+		will-change: contents;
+		line-height: 1;
+		color: rgba($color1, 0.7);
+		white-space: nowrap;
+		@extend .quick-transition;
+		@include min-break($break-small) {
+			bottom: 50px;
+			right: 50px;
+		}
+		.swiper-pagination-current {
+			color: rgba($color1, 1);
+		}
+		.light-title & {
+			color: rgba(#fff, 0.7);
+			
+			.swiper-pagination-current {
+				color: rgba(#fff, 1);
+			}
+		}
+		
+	}
+	&.swiper-pagination-bullets {
+		display: flex;
+		right: auto;
+		left: 50%;
+		line-height: 1;
+		@include translateX(-50%);
+		.swiper-pagination-bullet {	
+			display: inline-flex;
+			border-radius: 0;
+			background: none;
+			width: auto;
+			height: auto;
+			color: $color1;
+			opacity: 0.4;
+			font-weight: 600;
+			font-size: 12px;
+			margin: 0 7px;
+			@extend .quick-transition;
+			.light-title & {
+				color: #fff;
+			}
+			&.swiper-pagination-bullet-active,
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+.comments-container {
+	.navigation {
+		margin-top: 30px;
+		display: flex;
+		justify-content: space-between;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+}

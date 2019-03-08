@@ -1,0 +1,560 @@
+form {
+	margin: 0;
+
+	fieldset {
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+}
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+	border: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding: 0 0 12px;
+	margin-bottom: 27px;
+	color: $color1;
+	font-size: 14px;
+	font-weight: 400;
+	background: none;
+	max-width: 100%;
+	outline: 0;
+	font-family: inherit;
+	border-radius: 0;
+	@include box-shadow(none);
+	@include appearance(none);
+	@extend .quick-transition;
+	
+	.dark &,
+	.thb-light-column & {
+		color: #fff;
+		border-bottom: 1px solid rgba(255,255,255,0.1);	
+		
+		@include input-placeholder {
+			font-weight: 400;
+			color: rgba(255,255,255,0.7);
+		}
+		&:focus {
+			color: #fff;
+			border-color: #fff;	
+		}
+	}
+	&:focus {
+		border-bottom-color: 1px solid $color2;
+		color: $color1;
+		@include box-shadow(none);
+	}
+	
+	.wpcf7-form-control-wrap & {
+		margin-bottom: 37px;
+		width: 100%;
+	}
+	&.wpcf7-not-valid {
+		border-color: #e76049;
+	}
+	
+	@include input-placeholder {
+		font-weight: 400;
+		color: $color1;
+	}
+	&:focus {
+		border-color: $color1;	
+	}
+	&.full,
+	.woocommerce-checkout &,
+	.woocommerce-MyAccount-content & {
+		width: 100%;
+	}
+	&.box,
+	&.select2-input,
+	#customer_details &,
+	.woocommerce-MyAccount-content & {
+		border: 1px solid  rgba(0,0,0,0.1);
+		padding: 12px 12px 13px;
+	}
+}
+.wpcf7-checkbox {
+	display: block;
+	margin-bottom: 27px;
+	
+	label {
+		padding: 10px;
+		border: 1px solid #dedede;
+		font-size: 13px;
+		color: $color1;
+		margin: 0;
+		min-width: 150px;
+		input {
+			margin-right: 5px;	
+		}
+	}
+	.wpcf7-list-item {
+		display: block;
+		margin: 0 0 15px;
+		
+		@include min-break($break-small) {
+			display: inline-block;
+			& + .wpcf7-list-item {
+				margin-bottom: 0;
+				margin-left: 15px;
+			}
+		}
+	}
+}
+.wpcf7-response-output {
+	padding: 18px 22px !important;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.parsley-error-list,
+.wpcf7-not-valid-tip,
+.screen-reader-response {
+	display: none !important;
+}
+.wpcf7-form-control-wrap {
+	display: block;
+	width: 100%;
+}
+label {
+	display: block;
+	clear: left;
+	font-size: 18px;
+	color: $color1;
+	margin: 0 0 10px;
+	font-weight: 400;
+	#customer_details &,
+	.woocommerce-MyAccount-content & {
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 600;	
+		margin-bottom: 5px;
+	}
+}
+textarea {
+	min-height: 162px;
+	background-image: repeating-linear-gradient(to bottom, transparent, transparent 38px, rgba(0,0,0,0.15) 39px);
+	line-height: 40px;
+	resize: none;
+	border: 0;
+	padding: 0;
+	.wpcf7-form & {
+		height: 234px;
+	}
+	&.box,
+	#customer_details & {
+		background-image: none;
+		line-height: 1.6;
+	}
+}
+input[type="submit"],
+.button,
+.btn {
+	display: inline-flex;
+	align-items: center;
+	height: 44px;
+	background: $color1;
+	color: #fff;
+	padding: 0 40px;
+	max-width: 100%;
+	font-size: 14px;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	border-radius: 0;
+	@include appearance(none);
+	@extend .quick-transition;
+	
+	&>span {
+		display: flex;
+		white-space: nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	&:hover {
+		background: $color2;
+		color: #fff;
+	}
+	&.full {
+		width: 100%;
+		&>span {
+			width: 100%;	
+		}
+	}
+	&.masonry_btn {
+		margin-top: 30px;
+	}
+	&.white,
+	.light-title.type-portfolio & {
+		background: #fff;
+		color: $color1;
+		
+		&:hover {
+			background: $color1;
+			color: #fff;	
+		}
+		
+	}
+	&.grey {
+		background: #b6b6b6;
+		color: #fff;
+		
+		&:hover {
+			background: $color1;
+			color: #fff;	
+		}
+	}
+	&.accent,
+	&.wc-forward,
+	.place-order & {
+		background: $color2;
+		color: #fff;
+		
+		&:hover {
+			background: $color1;
+			color: #fff;	
+		}
+	}
+	&.thb-3d-style {
+		padding: 0 70px;
+    transform-style: preserve-3d;
+    @include perspective(1000px);
+    position: relative;
+    background: none;
+    span {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    	backface-visibility: hidden;
+    	will-change: transform;
+    	@extend .quick-transition;
+    	@include transform-origin(50%,50%);	
+    	@include transform(rotateX(0deg) translateZ(22px));
+    	
+    	background: $color1;
+    	color: #fff;
+    }
+    &:after {
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	content: attr(title);
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    	background: #484848;
+    	color: #fff;
+    	backface-visibility: hidden;
+    	will-change: transform;
+    	@include transform-origin(50%,50%);	
+    	@include transform(rotateX(90deg) translateZ(22px));
+    	@extend .quick-transition;
+    }
+    &:hover {
+    	span {
+    		@include transform(rotateX(-90deg) translateZ(22px));
+    	}	
+    	&:after {
+    		@include transform(rotateX(0deg) translateZ(22px));
+    	}
+    }
+    &.white,
+    .light-title.type-portfolio & {
+    	span {
+    		background: #fff;	
+    		color: $color1;
+    	}
+    	&:after {
+    		background: #ededed;
+    		color: $color1;
+    	}
+    }
+    &.accent {
+    	span {
+    		background: $color2;	
+    		color: #fff;
+    	}
+    	&:after {
+    		background: $color1;
+    		color: #fff;
+    	}
+    }
+	}
+	&.thb-pill-style {
+		border-radius: 500px;
+	}
+	&.thb-border-style {
+		border: 1px solid $color1;
+		color: $color1;
+		background: transparent;
+		&:hover {
+			background: $color1;
+			color: #fff;
+		}
+		&.white,
+		.light-title.type-portfolio & {
+			border-color: #fff;
+			color: #fff;
+			background: transparent;
+			&:hover {
+				background: #fff;
+				color: $color1;	
+			}
+		}
+		&.accent {
+			border-color: $color2;
+			color: $color2;
+			
+			&:hover {
+				background: $color2;
+				color: #fff;	
+			}
+		}
+		&>span {
+			@include transition(none);	
+		}
+	}
+	&.thb-fill-style {
+		background: transparent;
+		color: $color1;
+		position: relative;
+		border: 1px solid $color1;
+		z-index: 0;
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: #484848;
+			will-change: transform;
+			z-index: -2;
+			@include scale(1,0);
+			@include transform-origin(0, 100%);
+			@extend .quick-transition;
+		}
+		&:before {
+			background: $color1;
+			z-index: -1;
+			@include transition-delay(0.15s);
+		}
+		&:hover {
+			background: transparent;
+			color: #fff;
+			
+			span {
+				background: transparent;	
+			}
+			&:before,
+			&:after {
+				@include scale(1,1);
+			}
+		}
+		&.white,
+		.light-title.type-portfolio & {
+			border-color: #fff;
+			color: #fff;
+			&:before {
+				background: #fff;	
+			}
+			&:after {
+				background: #ededed;	
+			}
+			&:hover {
+				color: $color1;
+			}
+		}
+		&.accent {
+			border-color: $color2;
+			color: $color2;
+			
+			&:before {
+				background: $color2;	
+			}
+			&:after {
+				background: $color1;	
+			}
+			&:hover {
+				color: #fff;	
+			}
+		}
+		&>span {
+			@include transition(none);	
+		}
+	}
+	&.thb-text-style {
+		align-items: stretch;
+		background: none;
+		color: $color1;
+		padding: 0 25px;
+		position: relative;
+		font-weight: 600;
+		&:before {
+			content: '';
+			background: $color1;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			@include scale(0.5,1);
+			@extend .quick-transition;
+		}
+		&:after {
+			content: '';
+			background: $color1;
+			position: absolute;
+			top: -1px;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			@include scale(0,1);
+			@extend .quick-transition;
+		}
+		span {
+			margin: -1px 0;
+			border-bottom: 1px solid $color1;
+			position: relative;
+			&:before {
+				content: '';
+				background: $color1;
+				position: absolute;
+				bottom: 0;
+				left: -25px;
+				height: 100%;
+				width: 1px;
+				@include scale(1,0);
+				@include transform-origin(0, 100%);
+				@extend .quick-transition;
+			}
+			&:after {
+				content: '';
+				background: $color1;
+				position: absolute;
+				bottom: 0;
+				right: -25px;
+				height: 100%;
+				width: 1px;
+				@include scale(1,0);
+				@include transform-origin(0, 100%);
+				@extend .quick-transition;
+			}
+		}
+		&:hover {
+			&:before {
+				@include scale(1,1);	
+			}
+			span {
+				@include transition(none);
+				&:after,
+				&:before {
+					@include transition-delay(0.1s);
+					@include scale(1,1);
+				}	
+			}
+			&:after {
+				@include transition-delay(0.2s);
+				@include scale(1,1);	
+			}
+		}
+		&.white,
+		.light-title.type-portfolio & {
+			color: #fff;
+			background: transparent;
+			span {
+				border-color: #fff;	
+			}
+			&:before,
+			&:after,
+			span:before,
+			span:after {
+				background: #fff;	
+			}
+			&:hover {
+				background: transparent;	
+			}
+		}
+		&.accent {
+			color: $color2;
+			background: transparent;
+			span {
+				border-color: $color2;	
+			}
+			&:before,
+			&:after,
+			span:before,
+			span:after {
+				background: $color2;	
+			}
+			&:hover {
+				background: transparent;	
+			}
+		}
+	}
+	&.thb-solid-border {
+		border: 2px solid #efefef;
+		background: #fff;
+		color: $color1;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 600;
+		span {
+			@include transition(none);
+		}
+		&:hover {
+			border-color: $color1;
+			background: $color1;
+			color: #fff;	
+		}
+		&.white {
+			
+			&:hover {
+				border-color: #fff;
+				background-color: #fff;
+				color: $color1;
+			}
+		}
+		&.accent {
+			&:hover {
+				border-color: $color2;
+				background-color: $color2;
+				color: #fff;
+			}
+		}
+	}
+}
+.select2-container {
+	font-size: 14px;
+	.select2-choice {
+		border-color: rgba(0,0,0,0.1);
+		border-radius: 0 !important;
+		padding: 12px 12px 13px;
+		line-height: 1;
+	}
+}
+.select2-search {
+	padding-left: 10px;
+	padding-right: 10px;
+	
+	.select2-input {
+		margin-bottom: 5px;
+	}
+}
+.select2-drop-active {
+	border-color: rgba(0,0,0,0.1);
+}

@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="swiper-button-next" x="0" y="0" width="34" height="55.7" viewBox="0 0 34 55.7" enable-background="new 0 0 33.971 55.73" xml:space="preserve"><polygon fill-rule="evenodd" clip-rule="evenodd" points="21 51.5 21 51.5 16.7 55.7 0 39 4.2 34.8 13.7 44.2 13.7 0 19.7 0 19.7 44.3 29.7 34.2 34 38.5 "/></svg>
